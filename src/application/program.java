@@ -21,26 +21,27 @@ public class program {
 		int number = sc.nextInt();
 		
 		System.out.print("Check-in date(dd/MM/yyyy):");
-		Date  checkIn =sdf.parse(sc.next());
+		Date  CheckIn =sdf.parse(sc.next());
 		
 		System.out.print("Check-out date(dd/MM/yyyy):");
-		Date  checkOut =sdf.parse(sc.next());
+		Date  CheckOut =sdf.parse(sc.next());
 		
-		if(!checkOut.after(checkIn)) {
+		if(!CheckOut.after(CheckIn)) {
 			System.out.println("Erro reserva, data de check-out tem que ser depois do chek-in:");
 		}
 		else {
-			reservartion Reservartion = new reservartion(number,checkIn, checkOut);
+			reservartion Reservartion = new reservartion(number,CheckIn, CheckOut);
 			System.out.println("Reservation"+Reservartion );
 			
 			System.out.println();
-			System.out.println("Entre com nova data update da reserva:");
+			System.out.println("Entre com nova data,atualizar  reserva:");
 			System.out.print("Check-in date (dd/MM/yyyy): ");
-			checkIn=sdf.parse(sc.next());
+			CheckIn=sdf.parse(sc.next());
 			System.out.print("Check-out date (dd/MM/yyyy): ");
-			checkOut= sdf.parse(sc.next());
+			CheckOut= sdf.parse(sc.next());
 			
-			Reservartion.updateDates(checkIn,c)
+			Reservartion.updateDates(CheckIn,CheckOut);
+			System.out.println("Reservation"+Reservartion );
 			
 		}
 		
